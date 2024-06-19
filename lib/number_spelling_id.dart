@@ -67,14 +67,16 @@ class NumberSpelling {
     } else if (number < 200) {
       return 'seratus ${_spellNumber(number - 100)}'.trim();
     } else if (number < 1000) {
-      return '${_units[number ~/ 100]} ratus ${_spellNumber(number % 100)}'.trim();
+      return '${_units[number ~/ 100]} ratus ${_spellNumber(number % 100)}'
+          .trim();
     } else if (number < 2000) {
       return 'seribu ${_spellNumber(number - 1000)}'.trim();
     } else {
       for (int i = 0; i < _thousands.length; i++) {
         int unitValue = pow(1000, i).toInt();
         if (number < unitValue * 1000) {
-          return '${_spellNumber(number ~/ unitValue)} ${_thousands[i]} ${_spellNumber(number % unitValue)}'.trim();
+          return '${_spellNumber(number ~/ unitValue)} ${_thousands[i]} ${_spellNumber(number % unitValue)}'
+              .trim();
         }
       }
     }
