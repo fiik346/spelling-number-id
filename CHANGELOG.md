@@ -1,3 +1,7 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Spell number in Indonesian from 0 to 999,999,999.
+
+## 0.0.2
+
+* update specs
